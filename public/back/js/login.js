@@ -1,3 +1,16 @@
+// 进度条功能
+// 有ajax开启，进度条开启
+$(document).ajaxStart(function(){
+    NProgress.start();
+});
+// 所有ajax结束，进度条结束
+$(document).ajaxStop(function(){
+    setTimeout(function(){//模拟网络延迟
+        NProgress.done();
+    },500);
+});
+
+// 登陆表单验证
 $("#form").bootstrapValidator({
     feedbackIcons: {
         valid: 'glyphicon glyphicon-ok',
