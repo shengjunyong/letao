@@ -1,3 +1,12 @@
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.red {
+    color: #A94442;
+}
+/***************login页面开始***************/
 .body_bg {
     background-color: #222D32;
 }
@@ -9,3 +18,109 @@
     text-align: center;
     font-size: 20px;
 }
+/***************login页面结束***************/
+
+/***************index页面开始***************/
+.lt_aside {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 180px;
+    height: 100%;
+    background-color: #222D32;
+    z-index: 999;
+    transition: all 1s;
+}
+.lt_aside.hidemenu {
+    left: -180px;
+}
+.lt_aside .banner {
+    height: 50px;
+    line-height: 50px;
+    background-color: #367FA9;
+    font-size: 24px;
+    text-align: center;
+}
+.lt_aside .banner a {
+    margin: auto 0;
+}
+a,
+a:visited,
+a:hover,
+a:active {
+    color: #fff;
+    text-decoration: none;
+}
+.lt_aside .user {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: #fff;
+    text-align: center;
+}
+.lt_aside .user img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+.lt_aside .user p {
+    font-size: 18px;
+    padding-top: 5px;
+}
+
+.lt_aside .nav {
+    color: #fff;
+}
+
+.lt_aside .nav a {
+    display: block;
+    height: 40px;
+    line-height: 40px;
+    padding-left: 40px;
+    border-left: 3px solid transparent;
+}
+.lt_aside .nav a.current {
+    border-left: 3px solid #006699;
+    background-color: #1D1F21;
+}
+
+.lt_topbar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 50px;
+    width: 100%;
+    background-color: #3C8DBC;
+    padding-left: 180px;
+    transition: all 1s;
+}
+.lt_topbar.hidemenu {
+    padding-left: 0;
+}
+.lt_topbar a {
+    font-size: 16px;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+}
+
+.lt_main {
+    padding-top: 50px;
+    padding-left: 180px;
+    transition: all 1s;
+}
+.lt_main.hidemenu {
+    padding-left: 0;
+}
+.lt_main .container-fluid {
+
+}
+.lt_main .breadcrumb {
+    margin: 20px 0 20px 0;
+}
+
+.lt_main .breadcrumb a {
+    color: #337ab7;
+}
+
+/***************index页面结束***************/
