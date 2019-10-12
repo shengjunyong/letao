@@ -123,4 +123,11 @@ a:active {
     color: #337ab7;
 }
 
+.echarts_1,
+.echarts_2{
+    width: 48%;
+    height: 400px;
+}
+
+
 /***************index页面结束***************/
