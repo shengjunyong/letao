@@ -1,3 +1,29 @@
+// 进度条功能
+// 有ajax开启，进度条开启
+$(document).ajaxStart(function(){
+    NProgress.start();
+});
+// 所有ajax结束，进度条结束
+$(document).ajaxStop(function(){
+    setTimeout(function(){//模拟网络延迟
+        NProgress.done();
+    },500);
+});
+
+//登录拦截
+// 请求接口，判断管理员是否登陆
+if(location.href.indexOf('login') === -1){
+    $.ajax({
+        url:'/employee/checkRootLogin',
+        dataType: 'json',
+        success:function(info){
+            if(info.error === 400){
+                location.href = "login.html";
+            }
+        }
+    });
+}
+
 // 分类管理页面切换
 $(".category").click(function(){
     $('.nav .child').slideToggle();
