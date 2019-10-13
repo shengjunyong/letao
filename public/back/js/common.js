@@ -37,7 +37,7 @@ $(".icon-menu").click(function(){
 });
 
 // 退出功能,显示模态框
-$(".icon-logout").click(function(){
+$("#logoutModel").click(function(){
     // 显示模态框
     $('.modal').modal('show');
 });

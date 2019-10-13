@@ -1,6 +1,10 @@
 (function(){
     var currentPage = 1;
     var pageSize = 2;
+
+    //禁用启用数据，操作的当前id
+    var isDelete;
+    var id;
     //获取用户信息数据,渲染表格
     render();
     function render() {
@@ -31,5 +35,31 @@
         });
     }
 
+    // 禁用，启用点击事件
+    $("tbody").on('click','.btn',function(){
+        $("#userModal").modal("show");
+        id = $(this).parent().data('id');
+        isDelete = $(this).hasClass('btn-danger') ? 0 : 1;
+    });
+    // 确定启用或禁用
+    $("#confirmBtn").click(function(){
+        $.ajax({
+            type:'post',
+            url:'/user/updateUser',
+            data:{
+                id:id,
+                isDelete:isDelete
+            },
+            dataType:'json',
+            success: function(info){
+                if(info.success){
+                    // 关闭模态框
+                    $("#userModal").modal('hide');
+                    // 重新渲染数据
+                    render();
+                }
+            }
+        });
+    });
 
 })();
