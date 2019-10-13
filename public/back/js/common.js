@@ -37,9 +37,9 @@ $(".icon-menu").click(function(){
 });
 
 // 退出功能,显示模态框
-$("#logoutModel").click(function(){
+$(".icon-logout").click(function(){
     // 显示模态框
-    $('.modal').modal('show');
+    $('#logoutModal').modal('show');
 });
 //用户退出
 $("#logoutBtn").click(function(){
