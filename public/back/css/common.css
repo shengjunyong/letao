@@ -6,6 +6,9 @@ ul {
 .red {
     color: #A94442;
 }
+.mt_20 {
+    margin-top: 20px;
+}
 /***************login页面开始***************/
 .body_bg {
     background-color: #222D32;
