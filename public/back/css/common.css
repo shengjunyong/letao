@@ -131,3 +131,12 @@ a:active {
 
 
 /***************index页面结束***************/
+
+/****************user页面开始*****************/
+.table.table-bordered th,
+.table.table-bordered td{
+    text-align: center;
+    vertical-align: middle;
+}
+
+/****************user页面结束*****************/
